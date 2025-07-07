@@ -1,5 +1,7 @@
 // Div where profile information will appear 
 const overview = document.querySelector(".overview");
+// Unordered list to display repos
+const reposList = document.querySelector(".repo-list")
 
 const username = "rebeccasmall";
 
@@ -26,4 +28,8 @@ const displayUserInfo = function (data) {
       <p><strong>Number of public repos:</strong> ${data.public_repos}</p>
     </div> `
     overview.append(userDiv);
+};
+
+const getRepo = async function () {
+    
 };
