@@ -31,5 +31,9 @@ const displayUserInfo = function (data) {
 };
 
 const getRepo = async function () {
-    
+    const res = await fetch (`https://api.github.com/users/${username}/repos?sort=updated&per_page=100`);
+    const data = await res.json();
+    console.log(data);
 };
+
+getRepo();
