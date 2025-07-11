@@ -12,6 +12,15 @@ const getData = async function () {
     displayUserInfo(data);
 }
 
+const displayRepoInfo = function (repos) {
+  for (let item of repos) {
+    let listItem = document.createElement("li");
+    listItem.classList.add("repo");
+    listItem.innerHTML = `<h3> ${item.name} </h3>`
+    reposList.append(listItem);
+  };
+};
+
 getData();
 
 const displayUserInfo = function (data) {
@@ -36,4 +45,3 @@ const getRepo = async function () {
     console.log(data);
 };
 
-getRepo();
